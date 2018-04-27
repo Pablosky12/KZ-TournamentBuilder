@@ -1,0 +1,22 @@
+<section class="hero is-kz">
+  <div class="hero-body">
+    <div class="container is-fluid">
+      <form #Team="ngForm" (ngSubmit)="addTeam(Team)" class="level" >
+        <p class="level-left title">
+          KZ MATCHMAKING
+        </p>
+        <div class="level-right">
+          <div class="field has-addons">
+            <div class="control">
+              <input type="text" class="input" name="name" ngModel #name="ngModel" placeholder="Add a team">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-success is-kz"[disabled]="!name.value">ADD</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
