@@ -1,3 +1,8 @@
-<p>
-  fixture-grid works!
-</p>
+<table class="table">
+  <thead>
+    <tr>Date</tr>
+    <tr *ngFor="let match of grid.MatchesPerDate">
+      <th>Match {{match}}</th>
+    </tr>
+  </thead>
+</table>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { DataService } from '../services/data.service';
-import { Team } from '../models/team';
+import { Team } from '../models/Models';
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',
