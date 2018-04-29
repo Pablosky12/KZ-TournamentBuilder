@@ -4,7 +4,7 @@
 <div class="columns full-height">
   <div class="column is-three-quarters">
     <section class="section main">
-      <button (click)="generateGrid(dynamicTable)" class="button is-primary is-medium is-pulled-right generateBtn "
+      <button (click)="generateGrid(dynamicTable)" class="button is-primary is-medium is-block generateBtn "
       [disabled]="teams < 4 || teams>20 || teams%2 !==0">Generate Fixture</button>
       <div #dynamicTable>
         <div *ngIf="showPlaceHolder" class="raised placeholder">
