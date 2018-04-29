@@ -11,10 +11,10 @@
         <div class="level-right">
           <div class="field has-addons">
             <div class="control">
-              <input type="text" class="input" name="name" ngModel #name="ngModel" placeholder="Add a team">
+              <input type="text" class="input" name="name" ngModel #name="ngModel" [(ngModel)]="searchValue" placeholder="Add a team">
             </div>
             <div class="control">
-              <button type="submit" class="button is-success is-kz"[disabled]="!name.value">ADD</button>
+              <button type="submit" class="button is-success is-kz" [disabled]="!name.value">ADD</button>
             </div>
           </div>
 

@@ -3,9 +3,19 @@
 
 <div class="columns full-height">
   <div class="column is-three-quarters">
-    <section class="section">
-      <button (click)="generateGrid(dynamicTable)" class="button is-primary is-medium">Add</button>
-      <div #dynamicTable></div>
+    <section class="section main">
+      <button (click)="generateGrid(dynamicTable)" class="button is-primary is-medium is-pulled-right generateBtn "
+      [disabled]="teams < 4 || teams>20 || teams%2 !==0">Generate Fixture</button>
+      <div #dynamicTable>
+        <div *ngIf="showPlaceHolder">
+          <ul>
+            <li>Welcome to the fixture generator</li>
+            <li>Add at least 4 teams to generate a fixture</li>
+            <li>To generate a fixture, teams must always be even</li>
+            <li>Add up to 20 teams!</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
   <div class="colum raised">

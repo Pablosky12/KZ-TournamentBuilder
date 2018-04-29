@@ -1,12 +1,12 @@
-<table class="table">
+<table class="table is-narrow is-fullwidth">
   <thead>
     <tr>
       <th class="dateCell">Date</th>
       <th  *ngFor="let match of grid.MatchesPerDate | numToIterable : 1">Match {{match}}</th>
     </tr>
-    <tr *ngFor="let date of grid.Dates" >
+    <tr *ngFor="let date of grid.Dates" class="date">
       <td>Date {{date.ref}}</td>
-      <th  *ngFor="let match of grid.MatchesPerDate | numToIterable">{{date.Matches[match].Team1.Name}} Vs {{date.Matches[match].Team2.Name}}</th>
+      <th  *ngFor="let match of grid.MatchesPerDate | numToIterable">{{date.Matches[match].Team1.Name| titlecase}} Vs {{date.Matches[match].Team2.Name|titlecase}}</th>
     </tr>
   </thead>
 </table>

@@ -1,4 +1,8 @@
 .dateCell{
   background-color: mediumpurple;
   color: white;
+  min-width: 4em;
+}
+table{
+  margin-top: 2em;
 }

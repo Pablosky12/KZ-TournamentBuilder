@@ -1,12 +1,12 @@
-<div>
+<div class="is-clearfix">
   <button
-        class="button is-danger" (click)="executeDelete()"
-        [disabled]="toDelete === -1 || this.teams.length === 0">Delete
+        class="button is-danger is-pulled-right icon is-large is-delete" (click)="executeDelete()"
+        [disabled]="toDelete === -1 || this.teams.length === 0"><i class="fas fa-trash-alt fa-lg "></i>
       </button>
 
   <button
-        class="button is-kz" *ngFor="let team of teams"
-        (click)="setDelete(team.Id)">{{team.Name}} id:{{team.Id}}
+        class="button is-kz is-light" *ngFor="let team of teams"
+        (click)="setDelete(team.Id)">{{team.Name | titlecase}}
       </button>
 </div>
 

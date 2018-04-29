@@ -6,20 +6,25 @@ export class DataService {
   teams: Team[] = [];
 
   @Output() TeamList: EventEmitter<Team[]> = new EventEmitter();
+  @Output() TeamNumber: EventEmitter<Number> = new EventEmitter();
 
   getTeams() {
     return this.TeamList.emit(this.teams);
   }
   addTeam(team: Team) {
     this.teams.push(team);
+    this.TeamNumber.emit(this.teams.length);
   }
+
   deleteTeam(id: Number) {
     this.teams.forEach((element, index, object)  => {
       if (element.Id === id) {
         object.splice(index, 1);
       }
     });
+    this.TeamNumber.emit(this.teams.length);
   }
+
   gerateFixture() {
     let fixtureIds = 0;
     // Create a copy of the teams
@@ -71,7 +76,11 @@ export class DataService {
     }
 
     return new Fixture(datesArr, matchesByDate);
+  }
 
+  public getNumberOfTeams() {
+    console.log(this.teams.length);
+    return this.TeamNumber.emit(this.teams.length);
   }
 
   private getSpecificTeam(teamId: Number, teams: Team[]) {

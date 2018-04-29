@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { DataService } from '../services/data.service';
 import { Team } from '../models/Models';
@@ -8,14 +8,19 @@ import { Team } from '../models/Models';
   styleUrls: ['./teams.component.css'],
 })
 
-export class TeamsComponent implements OnInit {
+export class TeamsComponent implements OnInit, OnDestroy {
 
   teams: Team[];
   toDelete = -1;
   constructor (private svc: DataService) {}
+
   ngOnInit() {
     this.svc.TeamList.subscribe(data => this.teams = data);
     this.svc.getTeams();
+  }
+
+  ngOnDestroy() {
+    this.svc.TeamList.unsubscribe();
   }
 
   setDelete(id) {
