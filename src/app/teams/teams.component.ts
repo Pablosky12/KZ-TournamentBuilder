@@ -27,6 +27,7 @@ export class TeamsComponent implements OnInit {
   }
   executeDelete() {
     this.svc.deleteTeam(this.toDelete);
+    this.toDelete = -1;
   }
 
 }

@@ -16,8 +16,6 @@ export class DataService {
   deleteTeam(id: Number) {
     this.teams.forEach((element, index, object)  => {
       if (element.Id === id) {
-        console.log(element.Name);
-        console.log(element.Id);
         object.splice(index, 1);
       }
     });
@@ -60,8 +58,6 @@ export class DataService {
           currTeamDecrease--;
         }
         currTeamIncrease++;
-      }
-      for (let match = 1; match < matchesByDate; match++) {
       }
     }
 
