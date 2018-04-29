@@ -2,7 +2,7 @@ export class Team {
   constructor(
     public Name: string,
     public Id: number,
-    public FixtureId: number
+    public FixtureId?: number
   ) {}
 }
 
@@ -15,7 +15,8 @@ export class Match {
 
 export class Date {
     constructor(
-      public Matches: Match[]
+      public Matches: Match[],
+      public ref: Number
     ) {}
 }
 

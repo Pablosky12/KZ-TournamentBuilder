@@ -1,3 +1,17 @@
+
 <app-submit-team></app-submit-team>
-<app-fixture-grid></app-fixture-grid>
-<app-teams></app-teams>
+
+<div class="columns full-height">
+  <div class="column is-three-quarters">
+    <section class="section">
+      <button (click)="generateGrid(dynamicTable)" class="button is-primary is-medium">Add</button>
+      <div #dynamicTable></div>
+    </section>
+  </div>
+  <div class="colum raised">
+    <section class="section ">
+      <app-teams></app-teams>
+    </section>
+  </div>
+</div>
+

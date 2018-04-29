@@ -2,10 +2,25 @@ label[for="name"]{
   color: white
 }
 .is-kz{
-  background-color: #101019 ;
+  background-color: #181818 ;
 }
 .title{
   color: white;
 }
-
-
+.button.is-kz{
+  background-color: #661F7A!important;
+  color: white
+}
+.hero{
+  margin-bottom: 0.7em!important;
+}
+.hero-body{
+  padding: 1em !important;
+}
+.logo{
+  background: url('/assets/logo-default-slim-dark.png');
+  height: 100px;
+  width: 224px;
+  display: block;
+  margin-right: 1em;
+}

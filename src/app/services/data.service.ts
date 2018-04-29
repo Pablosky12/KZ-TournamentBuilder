@@ -35,14 +35,14 @@ export class DataService {
     const matchesByDate = (this.teams.length / 2);
     // The full fixture is nothing more than an array of dates
     let datesArr: Date[] = []; // new Array<Date>(dates);
-    datesArr.fill(new Date(undefined));
+    datesArr.fill(new Date(undefined, undefined));
     let currTeamIncrease = 1;
     let currTeamDecrease = _teams - 1;
 
     // First let's populate the fixture with the consecutive values until n-1 and repeat until complete;
     for (let currDate = 0; currDate < dates; currDate++) {
       // Each date is just an array of matches
-      datesArr[currDate] = new Date( new Array<Match>());
+      datesArr[currDate] = new Date( new Array<Match>(), currDate + 1);
 
       // For each match that should be in that date
       for (let match = 0; match < matchesByDate; match++) {
@@ -52,7 +52,7 @@ export class DataService {
         let team1 = this.getSpecificTeam(currTeamIncrease, fxTeams);
         datesArr[currDate].Matches[match] = new Match(team1, undefined);
         if (match > 0) {
-          if (currTeamDecrease === 1) {
+          if (currTeamDecrease === 0) {
             currTeamDecrease = _teams - 1;
           }
           let team2 = this.getSpecificTeam(currTeamDecrease, fxTeams);

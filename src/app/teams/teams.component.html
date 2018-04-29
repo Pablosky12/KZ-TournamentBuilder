@@ -1,10 +1,12 @@
-<div class=" column is-one-quarter ">
-  <div class="tile is-vertical">
-    <button
-    class="button is-danger" (click)="executeDelete()"
-    [disabled]="toDelete === -1 || this.teams.length===0">Delete</button>
+<div>
+  <button
+        class="button is-danger" (click)="executeDelete()"
+        [disabled]="toDelete === -1 || this.teams.length === 0">Delete
+      </button>
 
-    <button class="button is-kz" *ngFor="let team of teams"
-    (click)="setDelete(team.Id)">{{team.Name}} id:{{team.Id}}</button>
-  </div>
+  <button
+        class="button is-kz" *ngFor="let team of teams"
+        (click)="setDelete(team.Id)">{{team.Name}} id:{{team.Id}}
+      </button>
 </div>
+

@@ -8,6 +8,7 @@ import { DataService } from './services/data.service';
 import { HttpModule } from '@angular/http';
 import { TeamsComponent } from './teams/teams.component';
 import { FixtureGridComponent } from './fixture-grid/fixture-grid.component';
+import { NumToIterablePipe } from './num-to-iterable.pipe';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FixtureGridComponent } from './fixture-grid/fixture-grid.component';
     SubmitTeamComponent,
     TeamsComponent,
     FixtureGridComponent,
+    NumToIterablePipe,
 
   ],
   imports: [
@@ -24,6 +26,7 @@ import { FixtureGridComponent } from './fixture-grid/fixture-grid.component';
     FormsModule
   ],
   providers: [DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FixtureGridComponent]
 })
 export class AppModule { }
