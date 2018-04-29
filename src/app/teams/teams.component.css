@@ -7,3 +7,14 @@
   margin-top: -1.5em;
   margin-bottom: 5px;
 }
+.title{
+  display: inline;
+  color: white;
+  font-family: 'Paytone One', sans-serif;
+}
+.infoText{
+  margin-top: 1em;
+  color: white;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 20px
+}

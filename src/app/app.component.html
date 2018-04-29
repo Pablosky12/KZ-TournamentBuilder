@@ -7,7 +7,7 @@
       <button (click)="generateGrid(dynamicTable)" class="button is-primary is-medium is-pulled-right generateBtn "
       [disabled]="teams < 4 || teams>20 || teams%2 !==0">Generate Fixture</button>
       <div #dynamicTable>
-        <div *ngIf="showPlaceHolder">
+        <div *ngIf="showPlaceHolder" class="raised placeholder">
           <ul>
             <li>Welcome to the fixture generator</li>
             <li>Add at least 4 teams to generate a fixture</li>
